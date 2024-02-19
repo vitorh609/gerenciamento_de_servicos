@@ -1,20 +1,52 @@
-ServicoFront
-This project was generated with Angular CLI version 15.2.5.
+Aqui está um exemplo de um arquivo README.md para o seu projeto:
 
-Development server
-Run ng serve for a dev server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
+redução
+Editar
+Download
+Copiar código
+# Projeto de Registro de Serviços e Emissão de Notas Fiscais
 
-Code scaffolding
-Run ng generate component component-name to generate a new component. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
+Este projeto é um sistema de registro de serviços e emissão de notas fiscais desenvolvido com Angular 14 e Java 8 no back-end. O foco do projeto está no front-end, onde os usuários podem registrar serviços prestados e emitir notas fiscais.
 
-Build
-Run ng build to build the project. The build artifacts will be stored in the dist/ directory.
+## Instalação
 
-Running unit tests
-Run ng test to execute the unit tests via Karma.
+1. Clone o repositório:
 
-Running end-to-end tests
-Run ng e2e to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+git clone https://github.com/seu_usuario/projeto_registro_servicos.git
+Instale as dependências do projeto
+festa
+Editar
+Download
+Copiar código
+cd projeto_registro_servicos
+npm install
+você
+Iniciar o servidor de desenvolvimento
+festa
+Editar
+Download
+Copiar código
+ng serve
+Acesse o projeto na nave
+festa
+Editar
+Download
+Copiar código
+http://localhost:4200
+gravando
+Registro de serviços
+Emissão de notas fis
+Visualização de serviços e notas fiscais
+Tecnologias
+Angular 14
+Java 8 (back-end)
+Bootstrap (frontal
+licença
+Este projeto está licenciado sob licença MIT. Veja o arquivo LICENSE para obter mais informações.
 
-Further help
-To get more help on the Angular CLI use ng help or go check out the Angular CLI Overview and Command Reference page.# gerenciamento_de_servicos
+Editar
+Download
+Copiar código
+
+Lembre-se de substituir "seu_usuario" pelo seu nome de usuário do G
