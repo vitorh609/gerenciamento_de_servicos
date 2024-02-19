@@ -1,0 +1,54 @@
+<h1 class="mt-4">Clientes</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">
+    Consulta
+  </li>
+</ol>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-default" routerLink="clientes-form" (click)="novoCadastro()">
+        <i class="fa fa-plus"></i> Novo
+      </button>
+    </div>
+  </div>
+  <br/>
+  <div class="col-md-12">
+    <app-data-grid
+      [header]="configuracaoTabela"
+      [listaObjetos]="clientes"
+      [btnAcoesPosicao]="showActions"
+      (editarRegistro)="getObjetoEdit($event)"
+      (excluirRegistro)="readingClienteForDelete($event)"
+    >
+    </app-data-grid>
+    <app-page
+    [totalPaginas]="totalPaginas"
+    (page)="goToPage($event)"
+    >
+    </app-page>
+  </div>
+
+  <div id="modal-delecao" class="modal fade" role="dialog">
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Confirmacao</h4>
+        </div>
+
+        <div class="modal-body">
+          Deseja excluir o cliente {{ clienteSelecionado.nome }}?
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-success" (click)="deleteClient()" data-dismiss="modal"> Confirmar</button>
+          <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

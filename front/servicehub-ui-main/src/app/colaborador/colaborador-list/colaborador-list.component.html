@@ -1,0 +1,46 @@
+<h1 class="mt-4">Colaboradores</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">
+    Lista de colaboradores
+  </li>
+</ol>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-default" routerLink="prestador/form" (click)="novoCadastro()">
+        <i class="fa fa-plus"></i> Novo
+      </button>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <table class="table table-condensed table-hover">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let colaborador of colaboradores">
+        <td>{{colaborador.collaboratorId}}</td>
+        <td>{{colaborador.collaborator}}</td>
+        <td>{{colaborador.cpf}}</td>
+        <td>
+          <button class="btn btn-primary ml-1" (click)="onEdit(colaborador.collaboratorId)">
+            <i class="fa fa-edit" ></i>
+          </button>
+
+<!--          <button class="btn btn-danger" data-toggle="modal" data-target="#modal-delecao" (click)="readingClienteForDelete(cliente)">-->
+<!--            <i class="fa fa-trash" ></i>-->
+<!--          </button>-->
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

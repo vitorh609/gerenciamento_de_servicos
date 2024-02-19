@@ -1,0 +1,73 @@
+<h1 class="mt-4">Servico Prestado</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-bitem active"></li>
+</ol>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-success" role="alert" *ngIf="showMessage">
+        {{showMessage}}
+      </div>
+
+      <div class="alert alert-danger" role="alert"  *ngFor="let erro of errors">
+        {{erro}}
+      </div>
+
+    </div>
+  </div>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="selectCliente">Cliente:</label>
+          <select [(ngModel)]="servicoPrestado.idCliente" [ngModelOptions]="{standalone: true}"
+                  class="form-control" id="selectCliente">
+            <option value="">Selecione</option>
+            <option [ngValue]="cliente.id" *ngFor="let cliente of clientes">
+              {{ cliente.nome }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="inputDescricao" >Descrição</label>
+          <input type="text" [(ngModel)]="servicoPrestado.descricao" id="inputDescricao" class="form-control" name="descricao">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="inputPreco" >Preco</label>
+          <input type="text" [(ngModel)]="servicoPrestado.valor" id="inputPreco" class="form-control" name="preco">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="inputData" >Data</label>
+          <input type="text" [(ngModel)]="servicoPrestado.data" id="inputData" class="form-control" name="data">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-success" >
+          <i class="fa fa-save"></i>
+          Salvar
+        </button>
+        <button type="submit" class="btn btn-danger ml-1"  (click)="voltar()">
+          <i class="fa fa-arrow-left"></i>
+          Voltar
+        </button>
+      </div>
+
+    </div>
+  </form>
+</div>

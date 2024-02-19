@@ -1,0 +1,42 @@
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th *ngFor="let cabecalho of header">{{ cabecalho.header }}</th>
+      <th *ngIf="btnAcoesPosicao === 'start'">
+        Ações
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let objeto of listaObjetos">
+        <td *ngFor="let campo of header">
+<!--          {{ objeto[campo.campo] }}-->
+          {{ getValueObject(objeto, campo.campo) }}
+        </td>
+        <td *ngIf="btnAcoesPosicao === 'start'">
+
+          <button
+            type="button"
+            class="btn btn-sm"
+            title="Editar"
+            (click)="getObjetoEdit(objeto)"
+            >
+            <i class="fa fa-edit" ></i>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-sm"
+            title="Excluir"
+            (click)="getObjetoDelete(objeto)"
+            data-toggle="modal"
+            data-target="#modal-delecao"
+          >
+            <i class="fa fa-trash" ></i>
+          </button>
+
+        </td>
+      </tr>
+  </tbody>
+</table>
